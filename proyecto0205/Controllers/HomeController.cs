@@ -1,4 +1,6 @@
-﻿using System;
+﻿using proyecto0205.Models;
+using proyecto0205.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -17,7 +19,12 @@ namespace proyecto0205.Controllers
         {
             ViewBag.Message = "CArlos Ayuda.";
 
-            return View();
+            var peliculaService = new PeliculasService();
+            //var model = peliculaService.ObtenerPelicula();
+            List<Pelicula> modelos = peliculaService.ObtenerVariasPeliculas();
+           // var modelos = peliculaService.ObtenerVariasPeliculas();
+
+            return View(modelos);
         }
 
         public ActionResult Contact()
