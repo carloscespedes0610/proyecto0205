@@ -15,7 +15,7 @@ namespace proyecto0205.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "CArlos Ayuda.";
 
             return View();
         }
